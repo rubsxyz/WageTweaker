@@ -1,5 +1,5 @@
 @echo off
-rmdir C:\TT\ >nul 2>&1
+rmdir C:\WageTweaks\ >nul 2>&1
 color 6
 echo. 
 echo. 

@@ -7,13 +7,13 @@ $LogicalProcessors = Get-CimInstance -ClassName 'Win32_Processor' `
 $c = (reg query "HKLM\System\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}") | Where-Object {$PSItem -Like "HKEY_*"} | Select-Object -First 1
 
 If ($CoreCount -eq 2) {
-    Write-Output 'Only 2 cores' | Out-File -FilePath C:\TT\CoreInfo\INCompatibleCoreCount.txt
+    Write-Output 'Only 2 cores' | Out-File -FilePath C:\WageTweaks\CoreInfo\INCompatibleCoreCount.txt
         }  Else {
-    Write-Output 'Seems to match the necessary' | Out-File -FilePath C:\TT\CoreInfo\CompatibleCoreCount.txt
+    Write-Output 'Seems to match the necessary' | Out-File -FilePath C:\WageTweaks\CoreInfo\CompatibleCoreCount.txt
 } 
 
 # Backup
-reg export "$c" "C:\TT\TTRevert\ognic.reg" /y *>$null
+reg export "$c" "C:\WageTweaks\WageRevert\ognic.reg" /y *>$null
 # Basics
 reg add "$c" /v "MIMOPowerSaveMode" /t REG_SZ /d "3" /f *>$null
 reg add "$c" /v "PowerSavingMode" /t REG_SZ /d "0" /f *>$null
@@ -48,7 +48,7 @@ If ($CoreCount -gt 4) {
         reg add "HKLM\System\CurrentControlSet\Enum\$($i.Trim('  '))\Device Parameters\Interrupt Management\Affinity Policy" /v "DevicePolicy" /t REG_DWORD /d "3" /f *>$null
         Reg delete "HKLM\System\CurrentControlSet\Enum\$($i.Trim('  '))\Device Parameters\Interrupt Management\Affinity Policy" /v "AssignmentSetOverride" /f *>$null    
     }  Else {
-        Write-Output 'Não tem os Requesitos, não são 4 núcleos' | Out-File -FilePath C:\TT\CoreInfo\NotEqualTo4.txt
+        Write-Output 'Não tem os Requesitos, não são 4 núcleos' | Out-File -FilePath C:\WageTweaks\CoreInfo\NotEqualTo4.txt
 } 
 
 If ($CoreCount -ge 4) {
@@ -59,7 +59,7 @@ If ($CoreCount -ge 4) {
     $c = (reg query "HKLM\System\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}") | Where-Object {$PSItem -Like "HKEY_*"} | Select-Object -First 1
         reg delete "$c" /v "*RssBaseProcNumber" /f *>$null
         reg delete "$c" /v "*RssMaxProcNumber" /f *>$null
-        Write-Output 'Não tem os Requesitos, menos que 4 núcleos' | Out-File -FilePath C:\TT\CoreInfo\LessThan4.txt
+        Write-Output 'Não tem os Requesitos, menos que 4 núcleos' | Out-File -FilePath C:\WageTweaks\CoreInfo\LessThan4.txt
 } 
 
 If ($CoreCount -ge 6) {
@@ -67,7 +67,7 @@ If ($CoreCount -ge 6) {
         reg add "$c" /v "*RssBaseProcNumber" /t REG_SZ /d "4" /f *>$null
         reg add "$c" /v "*RssMaxProcNumber" /t REG_SZ /d "5" /f *>$null
     }  Else {
-        Write-Output 'Não tem os Requesitos, menos que 6 núcleos' | Out-File -FilePath C:\TT\CoreInfo\LessThan6.txt
+        Write-Output 'Não tem os Requesitos, menos que 6 núcleos' | Out-File -FilePath C:\WageTweaks\CoreInfo\LessThan6.txt
 } 
 
 If ($LogicalProcessors -gt $CoreCount) {
