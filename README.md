@@ -14,19 +14,32 @@ Wage Tweaker
 </h1>
 
 <p align="center">
- <img src="https://github.com/rubsxyz/WageTweaks/blob/main/images/favicon.ico?raw=true" width="200">
+ <img src="https://github.com/rubsxyz/WageTweaker/blob/main/images/favicon.ico?raw=true" width="200">
 </p>
 
-# WageTweaks
+## ⚠️ About
 
-WageTweaks is a simple batch script project designed to apply various system tweaks to improve performance and reliability.
+Wage Tweaker is a program that optimizes your Windows PC, allowing it to run faster and smoother.
 
-## Features
+I strongly recommend you to use this app in your low end desktop computer, as it will give you an extra FPS boost to your PC, at the moment, im focused in making Minecraft's FPS higher, and in the tests that i've peformed, my FPS practically tripled, it went from 60 to 180 FPS (can vary from PC to PC).
+Most tweaks may not be reccomended in high end computers but feel free to try, if you desire to remove the app afterwards then refer to [Uninstalling](#uninstalling).
 
-- System Fixer
-- Cache Cleaner
-- Registry Tweaks
-- More to come...
+## ✨ Features <a name = "features"></a>
+
+- Debloater (Remove unnecessary features)
+- Cache + Log Cleaning
+- RAM, CPU and GPU Optimization Tweaks
+- Internet Tweaks (DNS+MTU / Allow faster internet connections + Lower Ping)
+- Timer Resolution Services
+- Power Plan Tweak
+- Regedit Tweaks
+- Game Specific Tweaks (Minecraft, Brawlhalla and VALORANT)
+- Better VRAM Creation
+- Server Changer (Change your server from Microsoft to Google for faster connection)
+- System Bugfixes
+- Services Optimization
+- Automatic Installation
+- Incredibily Small File Size
 
 ## Usage
 
