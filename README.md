@@ -1,5 +1,5 @@
 <p align="center">
-  <!-- <img alt="Version" src="https://img.shields.io/github/v/tag/rubsxyz/WageTweaker?label=Version%3A" /> -->
+  <img alt="Version" src="https://img.shields.io/github/v/tag/rubsxyz/WageTweaker?label=Version%3A" />
   <a href="#" target="_blank">
     <img alt="License: Apache-2.0" src="https://img.shields.io/github/license/rubsxyz/WageTweaker" />
   </a>
