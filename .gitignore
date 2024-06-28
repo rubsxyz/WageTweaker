@@ -1,1 +1,2 @@
-WageTweaks.bat
+# Ignore Main tweaks .bat
+src/WageTweaks.bat
